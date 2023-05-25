@@ -1,9 +1,9 @@
 console.log("Javascript External Connected!!");
 
 // function yang berfungsi untuk mengitung Keliling persegi
-const hitungKeliling = (sisi) => sisi * 4;
+const hitungKeliling = (sisi) => 4 * sisi;
 // Rumus keliling
-const rumusKeliling = "K = S * 4";
+const rumusKeliling = "K = 4 * S";
 
 // function yang berfungsi untuk mengitung Luas persegi
 const hitungLuas = (sisi) => sisi * sisi;
@@ -31,8 +31,9 @@ const handleFormSubmit = (
     const result = calculation(sisi);
     document.getElementById(
       outputId
-    ).innerHTML = `${rumus} <br/> ${outputLabel} = ${sisi} x ${sisi} <br/> ${outputLabel} = ${result}`;
-
+    ).innerHTML = `${rumus} <br/> ${outputLabel} = ${
+      outputLabel === "K" ? `4 x ${sisi}` : `${sisi} x ${sisi}`
+    } <br/> ${outputLabel} = ${result}`;
     // Menghapus bekas inputan setelah submit
     form.elements[0].value = "";
 
