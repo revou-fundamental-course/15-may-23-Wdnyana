@@ -3,3 +3,7 @@
 # autograder-v2
 
 New version of autograder
+
+# Result of Test
+
+![image.png](https://github.com/seung-lab/autograder-v2/blob/master/image.png)
