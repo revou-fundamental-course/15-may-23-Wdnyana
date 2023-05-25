@@ -1,9 +1,8 @@
-const https = require('https');
-const cheerio = require('cheerio');
-const requiredElements = require('./testData');
+const https = require("https");
+const cheerio = require("cheerio");
+const requiredElements = require("./testData");
 
 const url = `https://${process.env.GITHUB_ACTOR}.github.io`;
-
 
 function testElements($) {
   let testCasesPassed = 0;
@@ -18,18 +17,20 @@ function testElements($) {
 }
 
 function testPage() {
-  https.get(url, (res) => {
-    let data = '';
-    res.on('data', (chunk) => {
-      data += chunk;
+  https
+    .get(url, (res) => {
+      let data = "";
+      res.on("data", (chunk) => {
+        data += chunk;
+      });
+      res.on("end", () => {
+        const $ = cheerio.load(data);
+        testElements($);
+      });
+    })
+    .on("error", (err) => {
+      console.error(`Error: ${err.message}`);
     });
-    res.on('end', () => {
-      const $ = cheerio.load(data);
-      testElements($);
-    });
-  }).on('error', (err) => {
-    console.error(`Error: ${err.message}`);
-  });
 }
 
 testPage();

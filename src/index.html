@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link css external -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Quicksand:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Kalkulator Matematika</title>
+  </head>
+  <body>
+    <!-- Konten -->
+
+    <div class="layout">
+      <!-- Konten Header -->
+      <header>
+        <h1 class="title__header">
+          Katik <span class="sub__header">Kalkulator Matematika</span>
+        </h1>
+
+        <div class="welcome">
+          <h2 class="title__welcome">Welcome to Katik</h2>
+          <p class="txt__welcome">Hai Sobat, Selamat Datang di Katik :)</p>
+          <p class="txt__welcome">
+            Sebuah Web Apps sederhana yang berfungsi untuk menghitung nilai Luas
+            dan Keliling bangun datar
+          </p>
+        </div>
+      </header>
+
+      <!-- Konten Main -->
+      <main class="main__content">
+        <!-- Html Menghitung luas -->
+        <section class="luas">
+          <h1 class="title__luas">Luas Persegi</h1>
+          <div class="parent__persegi">
+            <div class="abjad">
+              <div class="sub__abjad">A</div>
+              <div class="sub__abjad">B</div>
+            </div>
+            <div class="persegi"></div>
+            <div class="abjad">
+              <div class="sub__abjad">D</div>
+              <div class="sub__abjad">C</div>
+            </div>
+            <p class="txt__bujur">Bujur Sangkar</p>
+          </div>
+          <div class="luas__content">
+            <h2 class="title">Rumus Luas:</h2>
+            <div class="sub__keliling__content">
+              <h5 class="sub__title">L = S * S</h5>
+              <p class="txt">Dimana:</p>
+              <p class="sub__txt">L = Luas</p>
+              <p class="sub__txt">S = Sisi</p>
+            </div>
+          </div>
+
+          <div class="luas__form">
+            <form id="luasForm">
+              <h2 class="title">Hitung Luas Persegi</h2>
+              <input
+                type="text"
+                name="sisi-luas"
+                placeholder="Masukan Nilai Sisi"
+                class="text__inputed"
+              />
+              <button type="submit" name="hitung-luas" class="btn__submit">
+                Hitung
+              </button>
+
+              <div id="outputIdLuas" class="output">
+                <output id="luas_output"></output>
+              </div>
+              <button class="reset__txt">Reset</button>
+            </form>
+          </div>
+        </section>
+        <!-- end Html Menghitung luas -->
+
+        <!-- Html menghitung Keliling -->
+        <section class="keliling">
+          <h1 class="title__keliling">Keliling Persegi</h1>
+          <div class="parent__persegi">
+            <div class="abjad">
+              <div class="sub__abjad">A</div>
+              <div class="sub__abjad">B</div>
+            </div>
+            <div class="persegi"></div>
+            <div class="abjad">
+              <div class="sub__abjad">D</div>
+              <div class="sub__abjad">C</div>
+            </div>
+            <p class="txt__bujur">Bujur Sangkar</p>
+          </div>
+          <div class="keliling__content">
+            <h2 class="title">Rumus Keliling:</h2>
+            <div class="sub__keliling__content">
+              <h5 class="sub__title">K = S * 4</h5>
+              <p class="txt">Dimana:</p>
+              <p class="sub__txt">K = Keliling</p>
+              <p class="sub__txt">S = Sisi</p>
+            </div>
+          </div>
+
+          <div class="keliling__form">
+            <form id="kelilingForm">
+              <h2 class="title">Hitung Keliling Persegi</h2>
+              <input
+                type="text"
+                name="sisi-keliling"
+                placeholder="Masukan Nilai Sisi"
+                class="text__inputed"
+              />
+              <button type="submit" name="hitung-keliling" class="btn__submit">
+                Hitung
+              </button>
+
+              <div id="outputIdKeliling" class="output">
+                <output id="keliling_output"></output>
+              </div>
+              <button class="reset__txt">Reset</button>
+            </form>
+          </div>
+        </section>
+        <!-- end Html Menghitung Keliling -->
+      </main>
+    </div>
+    <!-- link Javascript external -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

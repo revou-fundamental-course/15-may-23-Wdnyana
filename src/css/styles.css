@@ -1,0 +1,240 @@
+/* All style */
+
+/* untuk mereset margin, padding, dan borderbox */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #659dbd;
+  color: #fff;
+}
+
+.layout {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* style untuk header */
+.title__header {
+  background: #bc986a;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+.sub__header {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.welcome {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 2rem auto;
+}
+
+.title__welcome {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 1rem 0.5;
+  margin-bottom: 0.5rem;
+}
+.txt__welcome {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+/* end style untuk header */
+
+/* style main content */
+/* style luas persegi */
+.luas,
+.keliling {
+  width: 100%;
+  margin: 5rem auto;
+  padding: 5rem 0.5rem;
+  border-radius: 25px;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+}
+.title__luas,
+.title__keliling,
+.title {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.abjad {
+  display: flex;
+  width: 40%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.persegi {
+  border: 2px solid #a9a9a9;
+  padding: 2rem;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.txt__bujur {
+  text-align: center;
+  margin: 0.5rem auto 3rem;
+}
+/* end style luas persegi */
+
+/* style rumus */
+.sub__keliling__content {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.sub__title {
+  padding: 0 0 1rem;
+}
+
+.txt {
+  padding: 0.5rem 0;
+}
+
+.sub__txt {
+  padding: 0.1rem 0;
+}
+/* end style rumus */
+
+/* style form */
+.text__inputed,
+.btn__submit,
+.reset__txt {
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.text__inputed::placeholder {
+  color: #fff;
+}
+
+.text__inputed {
+  caret-color: #fff;
+  color: #fff;
+  background: transparent;
+  padding: 1rem 1.2rem;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
+.btn__submit,
+.reset__txt {
+  width: 75%;
+  margin: 0 auto;
+  color: white;
+  margin-top: 20px;
+  background: #41acee;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btn__submit:hover,
+.reset__txt:hover {
+  box-shadow: none;
+}
+/* end style form */
+
+/*  style output */
+.output {
+  width: 50%;
+  margin: 2.5rem auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.73) inset;
+}
+/* end style output */
+/* end style main content */
+
+/* style untuk responsive */
+/* CSS khusus untuk tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main__content {
+    margin: 0 1.5rem;
+  }
+
+  .abjad {
+    width: 15%;
+  }
+
+  .persegi {
+    width: 10%;
+  }
+
+  .text__inputed {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .btn__submit,
+  .reset__txt {
+    width: 65%;
+  }
+}
+
+/* CSS khusus untuk desktop */
+@media (min-width: 1025px) {
+  .main__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+
+  .abjad {
+    width: 15%;
+  }
+
+  .persegi {
+    width: 7%;
+  }
+
+  .text__inputed {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .btn__submit,
+  .reset__txt {
+    width: 55%;
+  }
+}
+/* end style untuk responsive */
+
+/* end All style */
